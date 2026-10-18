@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# usePopcorn 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+usePopcorn is a movie search and watchlist application built with React. It uses the OMDb API to fetch movie information and includes a custom star-rating component so you can give movies your own ratings when adding them to your watchlist.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search movies:** Find movies using data retrieved from the OMDb API.
+- **View movie details:** See movie information such as its IMDb rating and runtime.
+- **Create a personal watchlist:** Add movies you want to keep track of.
+- **Rate movies yourself:** Use the custom star-rating component to give each movie a personal rating.
+- **Compare ratings:** Keep the movie's IMDb rating separate from your own rating in the watchlist.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- CSS
+- [OMDb API](https://www.omdbapi.com/) for movie data
+- Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js and npm](https://nodejs.org/)
+- An API key from [OMDb API](https://www.omdbapi.com/apikey.aspx)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Move into the project folder:
 
-### `npm run eject`
+   ```bash
+   cd YOUR-REPOSITORY
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Configure your OMDb API key. If the app reads the key from an environment variable named `REACT_APP_OMDB_API_KEY`, create a `.env` file in the project root and add:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```env
+   REACT_APP_OMDB_API_KEY=your_omdb_api_key
+   ```
 
-## Learn More
+   Replace the placeholder with your own API key. If your code uses a different environment-variable name or configuration method, follow the name and approach used in the project. Keep `.env` out of Git and never commit your actual API key.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+   Create React App will start the app, usually at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How to Use
 
-### Analyzing the Bundle Size
+1. Search for a movie.
+2. Select a result to view its information.
+3. Use the custom star-rating component to choose your personal rating.
+4. Add the movie to your watchlist.
+5. Review the watchlist to compare the movie's IMDb rating with your own rating and see its runtime.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project Purpose
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project demonstrates working with an external movie API, managing React application state, building a reusable interactive star-rating component, and maintaining a watchlist with personal ratings.
